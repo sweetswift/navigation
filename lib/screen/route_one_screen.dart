@@ -6,8 +6,23 @@ class RouteOneScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text('Route One'),
+      appBar: AppBar(
+        title: Text('Route One'),
+      ),
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 8.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: Text('pop'),
+            ),
+          ],
+        ),
       ),
     );
   }
