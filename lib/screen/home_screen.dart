@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation/screen/route_one_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -16,7 +17,13 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (BuildContext context) => RouteOneScreen(),
+                  ),
+                );
+              },
               child: Text('Push'),
             ),
           ],
