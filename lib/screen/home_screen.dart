@@ -9,8 +9,18 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Home Screen"),
       ),
-      body: Center(
-        child: Text('Home Screen'),
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 8.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            ElevatedButton(
+              onPressed: () {},
+              child: Text('Push'),
+            ),
+          ],
+        ),
       ),
     );
   }
