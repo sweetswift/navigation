@@ -24,13 +24,12 @@ class RouteTwoScreen extends StatelessWidget {
         ),
         ElevatedButton(
           onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (_) => RouteThreeScreen(),
-              ),
+            Navigator.of(context).pushNamed(
+              '/three',
+              arguments: 999,
             );
           },
-          child: Text('Push'),
+          child: Text('Push Named'),
         )
       ],
     );
